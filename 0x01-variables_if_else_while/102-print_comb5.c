@@ -8,31 +8,28 @@
  */
 int main(void)
 {
-	int x, y;
-
-	x = 0;
-	while (x < 100)
+	int i, j;
+	
+	for (i = 0; i < 100; i++)
 	{
-		y = 0;
-		while (y < 100)
+		for (j = 0; j < 100; j++)
 		{
-			if (x < y)
+			if (i < j)
 			{
-				putchar((x / 10) + 48);
-				putchar((x % 10) + 48);
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
-				putchar((y / 10) + 48);
-				putchar((y % 10) + 48);
-				if (x != 98 || y != 99)
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
 					putchar(',');
 					putchar(' ');
 				}
-				y++;
 			}
-			x++;
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
