@@ -4,7 +4,7 @@
 /**
  * *_strpbrk - searches a string for any of a set of bytes
  * @s: string to search
- * @accept: string containing the bytes to look for
+ * @accept: stringcontaining the bytes to look for
  *
  * Return: pointer to the byte in s that matches one of the bytes in accept
  * or NULL if no such byte is found
@@ -13,21 +13,16 @@ char *_strpbrk(char *s, char *accept)
 {
 	int x, y;
 
-	x = 0;
-	y = 0;
-	while (s[x] != '\0')
+	for (x = 0; *s != '\0'; x++)
 	{
-		while (accept[y] != '\0')
+		for (y = 0; accept[y] != '\0'; y++)
 		{
-			if (s[x] == accept[y])
+			if (*s == accept[j])
 			{
 				return (s);
 			}
-			y++;
 		}
-		x++;
 		s++;
-		y = 0;
 	}
 	return (NULL);
 }
