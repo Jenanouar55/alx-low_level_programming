@@ -23,8 +23,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 		p = va_arg(valist, char *);
 		printf("%s", (p == NULL) ? "(nil)" : p);
+		i++;
 	}
-	i++;
 	printf("\n");
 	va_end(valist);
 }
